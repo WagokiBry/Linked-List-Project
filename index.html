@@ -22,13 +22,33 @@
 
         append(value) {
           const newNode = new Node(value);
+          if(this.head === null){
+            this.head = newNode;
+            this.tail = newNode
+          }else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+          }
+        }
+        shift(){
+            if(!this.head) return null;
+
+            let removed = this.head;
+            this.head = this.head.next
+
+            if(!this.head){
+                this.tail = null
+            }
+            removed.next = null
+            return removed
         }
       }
 
       let head = new linkedList();
-      head.append(5);
-      head.append(10);
-      console.log(head);
+      head.append(1115);
+      
+      console.log(head.shift());
+      console.log(head.tail)
 
       //         const list = {
       //   head: {
