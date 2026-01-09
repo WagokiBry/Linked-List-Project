@@ -7,14 +7,27 @@
 </head>
 <body>
     <script>
-        class linkedList {
-            constructor(){
-                this.head = { value: 10, next: null };
-            }
-        }
+        // class linkedList {
+        //     constructor(){
+        //         this.head = { value: 10, next: null };
+        //     }
+        // }
 
-        let head = new linkedList()
-        console.log(head)
+        // let head = new linkedList()
+        // console.log(head)
+
+        const list = {
+  head: {
+    value: 10,
+    next: {
+      value: 20,
+      next: {
+        value: 30,
+        next: null
+      }
+    }
+  }
+};
     </script>
 </body>
 </html>
