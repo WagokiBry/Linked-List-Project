@@ -20,9 +20,33 @@ class Node {
             constructor(){
                 this.head = null;
             }
-        }
+
+            append(value){
+                const newNode = new Node(value);
+
+                if(this.head === null){
+                    this.head = newNode;
+                    return
+                }
+
+                let current = this.head;
+                
+                    while(current.next !== null){
+                        current = current.next;
+                    }
+                       
+                            current.next = newNode;
+                            
+                      
+                    
+
+                }
+            }
+        
 
         let head = new linkedList()
+        head.append(5)
+        head.append(10)
         console.log(head)
 
 
