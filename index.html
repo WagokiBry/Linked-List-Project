@@ -1,74 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-class Node {
-    constructor(value){
-        this.value = value;
-        this.next = null
-    }
-}
+      class Node {
+        constructor(value) {
+          this.value = value;
+          this.next = null;
+        }
+      }
 
+      class linkedList {
+        constructor() {
+          this.head = null;
+          this.tail = null;
+        }
 
+        append(value) {
+          const newNode = new Node(value);
+        }
+      }
 
-        class linkedList {
-            constructor(){
-                this.head = null;
-            }
+      let head = new linkedList();
+      head.append(5);
+      head.append(10);
+      console.log(head);
 
-            append(value){
-                const newNode = new Node(value);
+      //         const list = {
+      //   head: {
+      //     value: 10,
+      //     next: {
+      //       value: 20,
+      //       next: {
+      //         value: 30,
+      //         next: null
+      //       }
+      //     }
+      //   }
+      // };
 
-                if(this.head === null){
-                    this.head = newNode;
-                    return
-                }
-
-                let current = this.head;
-                
-                    while(current.next !== null){
-                        current = current.next;
-                    }
-                       
-                            current.next = newNode;
-                            
-                      
-                    
-
-                }
-            }
-        
-
-        let head = new linkedList()
-        head.append(5)
-        head.append(10)
-        console.log(head)
-
-
-
-//         const list = {
-//   head: {
-//     value: 10,
-//     next: {
-//       value: 20,
-//       next: {
-//         value: 30,
-//         next: null
-//       }
-//     }
-//   }
-// };
-
-// let current = list.head;
-// while(current!== null){
-//     console.log(current);
-//     current = current.next;
-// }
+      // let current = list.head;
+      // while(current!== null){
+      //     console.log(current);
+      //     current = current.next;
+      // }
     </script>
-</body>
+  </body>
 </html>
