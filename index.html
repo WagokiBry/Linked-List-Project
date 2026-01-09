@@ -7,33 +7,44 @@
 </head>
 <body>
     <script>
-        // class linkedList {
-        //     constructor(){
-        //         this.head = { value: 10, next: null };
-        //     }
-        // }
-
-        // let head = new linkedList()
-        // console.log(head)
-
-        const list = {
-  head: {
-    value: 10,
-    next: {
-      value: 20,
-      next: {
-        value: 30,
-        next: null
-      }
+class Node {
+    constructor(value){
+        this.value = value;
+        this.next = null
     }
-  }
-};
-
-let current = list.head;
-while(current!== null){
-    console.log(current);
-    current = current.next;
 }
+
+
+
+        class linkedList {
+            constructor(){
+                this.head = null;
+            }
+        }
+
+        let head = new linkedList()
+        console.log(head)
+
+
+
+//         const list = {
+//   head: {
+//     value: 10,
+//     next: {
+//       value: 20,
+//       next: {
+//         value: 30,
+//         next: null
+//       }
+//     }
+//   }
+// };
+
+// let current = list.head;
+// while(current!== null){
+//     console.log(current);
+//     current = current.next;
+// }
     </script>
 </body>
 </html>
