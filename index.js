@@ -45,14 +45,24 @@ let count = 0;
             
             return count
         }
+
+        gethead(){
+            if(!this.head) return null;
+            return this.head.value;
+        }
+
+        gettail(){
+            if(!this.tail) return null; 
+            return this.tail.value;
+        }
       }
 
-      let head = new linkedList();
-      head.append(1115);
-      head.append(1115);
-      head.append(1115);
-      
-      console.log(head.size());
-      console.log(head.tail)
+      let header = new linkedList();
+      header.append(15);
+      header.append(1115);
+      header.append(1110000);
+
+      console.log(header.gethead());
+      console.log(header.gettail());
 
      
